@@ -1,7 +1,13 @@
 FROM arm32v6/alpine:latest
 MAINTAINER docker@intrepid.de
 
-RUN apk add --update --no-cache mosquitto-clients bc bash openssl strace
+RUN passwd -l root ; \
+    apk add --upgrade --update --no-cache \
+      mosquitto-clients \
+      bc \
+      bash \
+      openssl \
+      strace
 
 # ADD push-mqtt.sh /opt/push-mqtt.sh
 # RUN chmod 750 /opt/push-mqtt.sh
