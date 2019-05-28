@@ -6,8 +6,7 @@ RUN passwd -l root ; \
       mosquitto-clients \
       bc \
       bash \
-      openssl \
-      strace
+      openssl
 
 # ADD push-mqtt.sh /opt/push-mqtt.sh
 # RUN chmod 750 /opt/push-mqtt.sh
