@@ -17,10 +17,8 @@ pipeline {
 		NAME = "rpi-mqtt-cpucore"
 		SECONDARYREGISTRY = "nexus.intrepid.local:4000"
 		SECONDARYNAME = "${NAME}"
-		TARGETVERSION = """${sh(
-			returnStdout: true,
-			script: 'date "+%F"'
-			)}"""
+		COMMANDSHELL = "/bin/bash"
+		TARGETRUNVERSION = "./run_version.sh"
 	}
 	stages {
 		stage('Build') {
