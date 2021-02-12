@@ -2,3 +2,7 @@ local_conf.h
 env.txt
 build.sh
 Build.sh
+Jenkinsfile
+action.sh
+get_version.sh
+run_version.sh
